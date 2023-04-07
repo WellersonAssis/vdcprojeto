@@ -14,6 +14,9 @@ import java.util.Optional;
 public class CarroService {
 
     private CarroRepository repository;
+    private List<Cliente> clientes;
+    private List<Marca> marcas;
+
     public CarroService(CarroRepository repository) {
         this.repository = repository;
     }
@@ -43,5 +46,13 @@ public class CarroService {
         if (carro.getNome() == null || carro.getNome().trim().equals("")) {
             throw new RegraNegocioException("Nome inválido");
         }
+    }
+
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public List<Marca> getMarcas() {
+        return marcas;
     }
 }

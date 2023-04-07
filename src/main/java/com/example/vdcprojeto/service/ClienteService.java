@@ -1,6 +1,7 @@
 package com.example.vdcprojeto.service;
 
 import com.example.vdcprojeto.exception.RegraNegocioException;
+import com.example.vdcprojeto.model.entity.Carro;
 import com.example.vdcprojeto.model.entity.Cliente;
 import com.example.vdcprojeto.model.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
@@ -43,5 +44,9 @@ public class ClienteService {
         if (cliente.getNome() == null || cliente.getNome().trim().equals("")) {
             throw new RegraNegocioException("Nome Inválido");
         }
+    }
+
+    public List<Carro> getCarros() {
+        return getCarros();
     }
 }

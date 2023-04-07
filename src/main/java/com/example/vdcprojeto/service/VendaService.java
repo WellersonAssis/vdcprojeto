@@ -1,6 +1,7 @@
 package com.example.vdcprojeto.service;
 
 import com.example.vdcprojeto.exception.RegraNegocioException;
+import com.example.vdcprojeto.model.entity.Funcionario;
 import com.example.vdcprojeto.model.entity.Venda;
 import com.example.vdcprojeto.model.repository.VendaRepository;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.util.Optional;
 public class VendaService {
 
     private VendaRepository repository;
+    private List<Funcionario> funcionarios;
 
     public VendaService(VendaRepository repository) {
         this.repository = repository;
@@ -43,5 +45,9 @@ public class VendaService {
         if (venda.getValor() == null || venda.getValor().equals("")) {
             throw new RegraNegocioException("Noma Inválido");
         }
+    }
+
+    public List<Funcionario> getFuncionarios() {
+        return funcionarios;
     }
 }
