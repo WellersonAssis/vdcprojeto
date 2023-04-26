@@ -49,4 +49,9 @@ public class ClienteService {
     public List<Carro> getCarros() {
         return getCarros();
     }
+
+    public Optional<Carro> getCarrosById(Long id) {
+        return null;
+    }
+
 }
