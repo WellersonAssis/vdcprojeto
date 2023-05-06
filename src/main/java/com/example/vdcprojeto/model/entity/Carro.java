@@ -20,6 +20,12 @@ public class Carro {
     private Integer codProduto;
     private Float valor;
 
+
+
+
     @ManyToOne
     private Venda venda;
+
+    @ManyToOne
+    private Marca marca;
 }
